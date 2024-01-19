@@ -1,0 +1,6 @@
+<odoo>
+    <menuitem id="menu_logistic_root" name="Logistic" sequence="260" groups="base.group_user"/>
+    <menuitem id="menu_logistic_create_1" name="Logistic Infor" parent="menu_logistic_root" sequence="0"/>
+    <menuitem id="menu_logistic_create_2" name="Create" parent="menu_logistic_root" sequence="100"/>
+
+</odoo>

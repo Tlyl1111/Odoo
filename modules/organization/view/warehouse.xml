@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+         <!-- Action -->
+        <record id="action_create_warehouse" model="ir.actions.act_window">
+            <field name="name">Warehouse Information</field>
+            <field name="res_model">warehouse.information</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new warehouse!
+            </p>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_tree_warehouse_information" model="ir.ui.view">
+            <field name="name">warehouse.information.tree</field>
+            <field name="model">warehouse.information</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="wh_code"/>
+                    <field name="wh_name"/>
+                    <field name="wh_type"/>
+                    <field name="wh_address"/>
+                    <field name="longitude"/>
+                    <field name="latitude"/>
+                    <field name="wh_temperature"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Form View -->
+        <record id="view_warehouseinformation_form" model="ir.ui.view">
+            <field name="name">warehouse.information.form</field>
+            <field name="model">warehouse.information</field>
+            <field name="arch" type="xml">
+                <form string="Create Warehouse">
+                    <sheet>
+                        <group>
+                            <field name="wh_code"/>
+                            <field name="wh_name"/>
+                            <field name="wh_type"/>
+                            <field name="wh_address"/>
+                            <field name="longitude"/>
+                            <field name="latitude"/>
+                            <field name="wh_temperature"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

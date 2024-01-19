@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+         <!-- Action -->
+        <record id="action_create_vehicle" model="ir.actions.act_window">
+            <field name="name">Vehicle Information</field>
+            <field name="res_model">vehicle.information</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new vehicle!
+            </p>
+            </field>
+        </record>
+
+
+        <!-- Tree View -->
+        <record id="view_tree_vehicles_information" model="ir.ui.view">
+            <field name="name">vehicle.information.tree</field>
+            <field name="model">vehicle.information</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="vehicle_name"/>
+                    <field name="vehicle_code"/>
+                    <field name="vehicle_type_id"/>
+                    <field name="license_plate"/>
+                    <field name="temperature_type"/>
+                    <field name="start_time"/>
+                    <field name="stop_time"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Form View -->
+        <record id="view_vehicleinformation_form" model="ir.ui.view">
+            <field name="name">vehicle.information.form</field>
+            <field name="model">vehicle.information</field>
+            <field name="arch" type="xml">
+                <form string="Create Vehicle">
+                    <sheet>
+                        <group>
+                            <group>
+
+                                <field name="license_plate"/>
+
+                                <field name="vehicle_name"/>
+                                <field name="vehicle_code"/>
+                                <field name="vehicle_type_id"/>
+                                <field name="temperature_type"/>
+                                <field name="temp_zone"/>
+                                <field name="volume"/>
+                                <field name="weight"/>
+                            </group>
+                            <group>
+                                <field name="start_time"/>
+                                <field name="stop_time"/>
+                                <field name="lunch_start_time"/>
+                                <field name="lunch_stop_time"/>
+                                <field name="mdp"/>
+                                <field name="cargo_area_length"/>
+                                <field name="cargo_area_width"/>
+                                <field name="cargo_area_height"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="speed"/>
+                                <field name="gross_weight"/>
+                                <field name="real_weight"/>
+                                <field name="registration_date"/>
+                                <field name="rental_cost"/>
+                            </group>
+                            <group>
+                                <field name="fixed_cost"/>
+                                <field name="cost_per_km"/>
+                                <field name="maximum_single_order_weight"/>
+                                <field name="maximum_single_order_volume"/>
+
+                                <field name="active"/>
+                                <field name="sub_contractor"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

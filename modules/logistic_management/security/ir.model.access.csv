@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+logistic_management.access_logistic_information,access_logistic_information,logistic_management.model_logistic_information,base.group_user,1,1,1,1

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+         <!-- Action -->
+        <record id="action_customer" model="ir.actions.act_window">
+            <field name="name">Customer Information</field>
+            <field name="res_model">customer.information</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new customer!
+            </p>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_tree_customer" model="ir.ui.view">
+            <field name="name">customer.tree</field>
+            <field name="model">customer.information</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="cus_code"/>
+                    <field name="cus_name"/>
+                    <field name="cus_address"/>
+                    <field name="cus_phone"/>
+                    <field name="cus_email"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Form View -->
+        <record id="view_customer_form" model="ir.ui.view">
+            <field name="name">customer.form</field>
+            <field name="model">customer.information</field>
+            <field name="arch" type="xml">
+                <form string="Create Customer">
+                    <sheet>
+                        <group>
+                            <field name="cus_code"/>
+                            <field name="cus_name"/>
+                            <field name="cus_address"/>
+                            <field name="cus_phone"/>
+                            <field name="cus_email"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

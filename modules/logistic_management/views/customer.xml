@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+        <record id="view_form_customer" model="ir.ui.view">
+            <field name="name">customer.form</field>
+            <field name="model">democus.information</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <!-- Thêm các trường khác của khách hàng ở đây -->
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tree_customer" model="ir.ui.view">
+            <field name="name">customer.tree</field>
+            <field name="model">democus.information</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <!-- Thêm các trường khác của khách hàng ở đây -->
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_customer" model="ir.actions.act_window">
+            <field name="name">Customer</field>
+            <field name="res_model">democus.information</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_tree_customer"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Tạo bản ghi khách hàng đầu tiên của bạn
+                </p>
+            </field>
+        </record>
+
+
+
+    </data>
+</odoo>

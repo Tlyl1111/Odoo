@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+         <!-- Action -->
+        <record id="action_order" model="ir.actions.act_window">
+            <field name="name">Order Information</field>
+            <field name="res_model">order.information</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new order!
+            </p>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_tree_order" model="ir.ui.view">
+            <field name="name">order.tree</field>
+            <field name="model">order.information</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="od_code"/>
+                    <field name="cus"/>
+                    <field name="height"/>
+                    <field name="weight"/>
+                    <field name="storage_time"/>
+                    <field name="order"/>
+                    <field name="pick_up"/>
+                    <field name="delivery"/>
+                    <field name="status"/>
+                    <field name="place"/>
+                    <field name="longitude"/>
+                    <field name="latitude"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Form View -->
+        <record id="view_order_form" model="ir.ui.view">
+            <field name="name">order.form</field>
+            <field name="model">order.information</field>
+            <field name="arch" type="xml">
+                <form string="Create Customer">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="od_code"/>
+                                <field name="cus"/>
+                                <field name="height"/>
+                                <field name="weight"/>
+                                <field name="storage_time"/>
+                            </group>
+                            <group>
+                                <field name="order"/>
+                                <field name="pick_up"/>
+                                <field name="delivery"/>
+                                <field name="status"/>
+                            </group>
+                            <group>
+                                <field name="place"/>
+                                <field name="longitude"/>
+                                <field name="latitude"/>
+                            </group>
+                        </group>
+                        <footer>
+                            <button string="Calculate Routes" type="object" name="calculate_routes" class="btn-primary"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

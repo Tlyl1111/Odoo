@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record id="view_form_my_module" model="ir.ui.view">
+            <field name="name">my.module.form</field>
+            <field name="model">my.module.model1</field>
+            <field name="arch" type="xml">
+                <form string="My Model1">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_my_module" model="ir.actions.act_window">
+            <field name="name">Demo Module</field>
+            <field name="res_model">my.module.model</field>
+            <field name="view_mode">form,tree</field>
+        </record>
+
+        <menuitem id="menu_my_module" name="My Module"
+                  action="action_my_module"
+                  parent="base.menu_custom"/>
+    </data>
+</odoo>

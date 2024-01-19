@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+         <!-- Menu -->
+        <menuitem id="main_partners_menu" name="Partners"
+                    sequence="10">
+            <menuitem id="customer_information_menu" name="Customer"
+                    action="action_customer"
+                    sequence="1">
+            </menuitem>
+        </menuitem>
+
+
+    </data>
+</odoo>

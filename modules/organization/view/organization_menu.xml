@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+         <!-- Menu -->
+        <menuitem id="main_organization_menu" name="Organization"
+                    sequence="10" >
+            <menuitem id="warehouse_information_menu" name="Warehouse"
+                    action="action_create_warehouse"
+                    sequence="1">
+            </menuitem>
+        </menuitem>
+
+
+    </data>
+</odoo>

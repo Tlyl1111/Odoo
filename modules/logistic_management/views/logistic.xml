@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Action to open the Logistic Information views -->
+        <record id="action_logistic_information" model="ir.actions.act_window">
+            <field name="name">Logistic Information</field>
+            <field name="res_model">logistic.information</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first logistic information record
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu item to access Logistic Information -->
+        <menuitem id="menu_logistic_information"
+                  name="Logistic Information"
+                  action="action_logistic_information"
+                    sequence ='10'>
+            <menuitem id="menu_logistic_information_1"
+                  name="Customer"
+                  action="action_logistic_information"
+                    sequence ='1'/>
+        </menuitem>
+
+        <!-- Tree View -->
+        <record id="view_tree_logistic_information" model="ir.ui.view">
+            <field name="name">logistic.information.tree</field>
+            <field name="model">logistic.information</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="customer"/>
+                    <field name="warehouse"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_form_logistic_information" model="ir.ui.view">
+            <field name="name">logistic.information.form</field>
+            <field name="model">logistic.information</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="customer"/>
+                            <field name="warehouse"/>
+                            <field name="status"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

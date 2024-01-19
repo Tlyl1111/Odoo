@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+         <!-- Menu -->
+        <menuitem id="main_warehouse_menu" name="Warehouse"
+                    sequence="10" >
+            <menuitem id="warehouse_information_menu" name="Warehouse"
+                    action="action_warehouse"
+                    sequence="1">
+            </menuitem>
+            <menuitem id="shelves_information_menu" name="Shelves"
+                    action="action_shelves"
+                    sequence="2">
+            </menuitem>
+        </menuitem>
+
+
+    </data>
+</odoo>

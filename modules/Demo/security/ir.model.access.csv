@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_my_module_model1,my.module.model1,model_my_module_model1,,1,1,1,1
